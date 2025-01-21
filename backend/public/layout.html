@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Template</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .email-container {
+        background-color: #ffffff;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+      .email-header {
+        text-align: center;
+        padding: 10px 0;
+      }
+      .email-body {
+        margin: 20px 0;
+      }
+      .email-footer {
+        text-align: center;
+        color: #888;
+        font-size: 12px;
+      }
+      img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <img src="{{image}}" alt="Email Image" style="max-width: 100%" />
+      <div class="email-header">
+        <h1>{{title}}</h1>
+      </div>
+      <div class="email-body">
+        <p>{{content}}</p>
+      </div>
+      <div class="email-footer">
+        <p>{{footer}}</p>
+      </div>
+    </div>
+  </body>
+</html>
