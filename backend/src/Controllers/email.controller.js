@@ -42,7 +42,6 @@ const uploadEmailConfig = async (req, res) => {
     }
     const avatar = await uploadOnCloudinary(images[0].path);
     const avatarPath = avatar.url;
-    console.log(images[0].path);
 
     if (!title && !content)
       return res.status(400).json({ error: "title and content are required" });
@@ -81,7 +80,6 @@ const updateEmailConfig = async (req, res) => {
 
 const renderAndDownloadTemplate = async (req, res) => {
   const { title, content, footer } = req.body;
-  console.log({ title, content, footer });
   const { images } = req.files;
   if (!images) {
     return res.status(400).json({ erorr: "Image is required " });
