@@ -8,14 +8,18 @@ const router = Router();
 
 // Configuring Multer for file uploads
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "./public");
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
-  },
-});
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, "./public");
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, file.originalname);
+//   },
+// });
+
+// Changes for Deployment
+
+const storage = multer.memoryStorage();
 
 const upload = multer({ storage });
 
