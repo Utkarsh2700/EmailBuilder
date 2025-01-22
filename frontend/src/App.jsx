@@ -5,8 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import "./App.css";
-import Routes from "./routes/routes";
-import BuilderPage from "./pages/BuilderPage";
+import Routes from "./routes/Routes.jsx";
+import BuilderPage from "./pages/BuilderPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements([
